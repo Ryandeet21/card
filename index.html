@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Merry Christmas ❤️</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0a1128;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card {
+    text-align: center;
+    background: rgba(255,255,255,0.07);
+    padding: 40px;
+    border-radius: 25px;
+    backdrop-filter: blur(8px);
+    animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+    from { box-shadow: 0 0 10px #ff4da6; }
+    to { box-shadow: 0 0 25px #ff80bf; }
+}
+h1 {
+    font-size: 42px;
+    animation: float 3s ease-in-out infinite;
+    margin: 10px 0;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+.snowflake {
+    position: absolute;
+    top: -10px;
+    font-size: 24px;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+@keyframes fall {
+    to { transform: translateY(110vh); }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>🎄</h1>
+    <h1>Merry Christmas</h1>
+    <p>
+       I hope your day is filled with love, laughter, and warmth.<br>
+       Just wanted you to know that I'm really grateful for you,<br>
+       and I love the way you make life feel a little sweeter. ❤️
+    </p>
+    <p><strong>You’re special to me.</strong></p>
+    <p>– Ryan</p>
+</div>
+
+<script>
+// Generate snowflakes
+for (let i = 0; i < 30; i++) {
+    let snow = document.createElement("div");
+    snow.className = "snowflake";
+    snow.innerHTML = "❄️";
+    snow.style.left = Math.random() * 100 + "vw";
+    snow.style.animationDuration = Math.random() * 3 + 2 + "s";
+    snow.style.fontSize = Math.random() * 10 + 15 + "px";
+    document.body.appendChild(snow);
+}
+</script>
+
+</body>
+</html>
